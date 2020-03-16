@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 881 300" width="881" height="300">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M-964.52 -406.5L950.79 -540.55L1321.52 4756.5L-593.79 4890.55L-964.52 -406.5Z" />
+		</clipPath>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="571.195" y1="215.187" x2="580.305" y2="84.895">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="0" />
+			<stop offset="1" stop-color="#ff5353"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+		.shp1 { opacity: 0.302;fill: #ff5353 } 
+		.shp2 { fill: #f6f8fa } 
+		.shp3 { opacity: 0.2;fill: url(#grd1) } 
+		.shp4 { fill: none;stroke: #ff5353;stroke-linecap:round;stroke-width: 1.65 } 
+		.shp5 { fill: #ffffff;stroke: #4360df;stroke-width: 1.65 } 
+		.txt6 { font-size: 13px;fill: #79828b;font-family: "" Poppins"";text-anchor: middle } 
+		.txt7 { font-size: 13px;fill: #79828b;font-family: "" Poppins"";text-anchor: end } 
+		.txt8 { font-size: 12px;fill: #79828b;font-family: "" Poppins"";text-anchor: middle } 
+		.shp9 { fill: #ffffff;stroke: #6271d2;stroke-width: 1.1 } 
+		.txt10 { font-size: 19px;fill: #42505c;font-family: "" Poppins"";text-anchor: middle } 
+		.shp11 { fill: #fb5252 } 
+		.shp12 { opacity: 0.302;fill: #fb5252 } 
+		.shp13 { opacity: 0.439;fill: #ffffff } 
+	</style>
+	<g id="Clip-Path: ::::Home" clip-path="url(#cp1)">
+		<g id="Layer 45">
+			<g id="Group 211">
+				<g id="Earnings">
+					<path id="cardBg" class="shp0" d="M8.65 0.77L872.77 0.72C877.19 0.72 880.77 4.3 880.77 8.72L880.79 291.72C880.79 296.15 877.21 299.72 872.79 299.72L8.66 299.78C4.24 299.78 0.66 296.2 0.66 291.78L0.65 8.78C0.65 4.35 4.23 0.78 8.65 0.77Z" />
+					<g id="eth">
+						<path id="Rectangle 6" class="shp1" d="M48.59 179.21L152.86 179.2C163.36 179.21 171.85 187.69 171.86 198.2L171.86 198.78C171.86 209.29 163.36 217.78 152.86 217.78L48.6 217.79C38.09 217.8 29.6 209.3 29.59 198.79L29.59 198.21C29.59 187.71 38.09 179.21 48.59 179.21Z" />
+					</g>
+					<g id="chart">
+						<path id="bar" class="shp2" d="M309.29 39.34L345.46 39.34L345.48 232.24L309.3 232.25L309.29 39.34Z" />
+						<path id="bar" class="shp2" d="M490.14 39.33L526.31 39.33L526.32 232.24L490.15 232.23L490.14 39.33Z" />
+						<path id="bar" class="shp2" d="M670.98 39.31L707.15 39.32L707.17 232.22L671 232.22L670.98 39.31Z" />
+						<path id="bar" class="shp2" d="M399.71 39.33L435.89 39.33L435.9 232.24L399.73 232.23L399.71 39.33Z" />
+						<path id="bar" class="shp2" d="M580.56 39.33L616.73 39.32L616.75 232.22L580.57 232.23L580.56 39.33Z" />
+						<path id="bar" class="shp2" d="M760.2 39.32L796.38 39.31L796.39 232.21L760.22 232.21L760.2 39.32Z" />
+						<path id="bar" class="shp2" d="M355.1 39.34L391.28 39.33L391.29 232.24L355.12 232.24L355.1 39.34Z" />
+						<path id="bar" class="shp2" d="M534.75 39.33L570.92 39.32L570.93 232.23L534.76 232.23L534.75 39.33Z" />
+						<path id="bar" class="shp2" d="M715.59 39.32L751.77 39.31L751.78 232.21L715.61 232.22L715.59 39.32Z" />
+						<path id="bar" class="shp2" d="M445.53 39.33L481.7 39.33L481.71 232.23L445.54 232.23L445.53 39.33Z" />
+						<path id="bar" class="shp2" d="M625.17 39.32L661.34 39.32L661.36 232.22L625.18 232.22L625.17 39.32Z" />
+						<path id="bar" class="shp2" d="M806.02 39.31L842.19 39.31L842.2 232.21L806.03 232.22L806.02 39.31Z" />
+						<path id="gradientFill" class="shp3" d="M825.32 231.01L326.19 231.04L326.18 166.37L373.23 104.63L419.35 133.18L462.12 105.47L507.11 227.03L552.83 98.54L596.82 169.51L645.13 122.15L688.29 140.26L731.81 105.46L778.8 122.14L825.32 87.54" />
+						<path id="graphLine" class="shp4" d="M327.39 167.68L373.74 104.07L419.77 134.68L463.39 105.54L507.85 227.41L553.65 98.08L597.93 171.2L645.99 122.41L689.07 141.83L733 105.53L779.96 122.41L825.31 88.74" />
+						<path id="Oval 6 Copy 11" class="shp5" d="M553.44 102.02C550.44 102.02 548.01 99.6 548.01 96.59C548.01 93.59 550.44 91.17 553.44 91.17C556.44 91.17 558.87 93.59 558.87 96.59C558.87 99.59 556.44 102.01 553.44 102.02Z" />
+						<text id="Mar" style="transform: matrix(1,0,0,1,328.541,254.682)" >
+							<tspan x="0" y="0" class="txt6">Mar</tspan>
+						</text>
+						<text id="$100" style="transform: matrix(1,0,0,1,291.284,211.282)" >
+							<tspan x="0" y="0" class="txt7">$100</tspan>
+						</text>
+						<text id="$150" style="transform: matrix(1,0,0,1,291.281,164.261)" >
+							<tspan x="0" y="0" class="txt7">$150</tspan>
+						</text>
+						<text id="$200" style="transform: matrix(1,0,0,1,291.662,118.447)" >
+							<tspan x="0" y="0" class="txt7">$200</tspan>
+						</text>
+						<text id="$250" style="transform: matrix(1,0,0,1,291.659,71.426)" >
+							<tspan x="0" y="0" class="txt7">$250</tspan>
+						</text>
+						<text id="May" style="transform: matrix(1,0,0,1,418.156,253.676)" >
+							<tspan x="0" y="0" class="txt8">May</tspan>
+						</text>
+						<text id="Jul" style="transform: matrix(1,0,0,1,507.593,254.671)" >
+							<tspan x="0" y="0" class="txt6">Jul</tspan>
+						</text>
+						<text id="Sep" style="transform: matrix(1,0,0,1,597.4,254.665)" >
+							<tspan x="0" y="0" class="txt6">Sep</tspan>
+						</text>
+						<text id="Jan" style="transform: matrix(1,0,0,1,777.644,254.655)" >
+							<tspan x="0" y="0" class="txt6">Jan</tspan>
+						</text>
+						<text id="Nov" style="transform: matrix(1,0,0,1,689.028,254.66)" >
+							<tspan x="0" y="0" class="txt6">Nov</tspan>
+						</text>
+						<path id="Rectangle 7" class="shp9" d="M529.75 46.56L577.12 46.56C585.69 46.56 592.62 53.49 592.62 62.06L592.63 68.44C592.62 77.01 585.69 83.93 577.12 83.94L529.75 83.93C521.18 83.93 514.25 77.01 514.25 68.44L514.26 62.06C514.25 53.49 521.18 46.56 529.75 46.56Z" />
+						<text id="$226" style="transform: matrix(1,0,0,1,552.12,73.588)" >
+							<tspan x="0" y="0" class="txt10">$226</tspan>
+						</text>
+					</g>
+				</g>
+				<path id="Rectangle 486" class="shp11" d="M37.78 34.53L191.38 34.53C195.25 34.53 198.37 37.66 198.37 41.53L198.38 44.4C198.38 48.27 195.25 51.41 191.38 51.41L37.79 51.41C33.92 51.41 30.79 48.28 30.79 44.41L30.79 41.54C30.79 37.67 33.91 34.53 37.78 34.53Z" />
+				<path id="Rectangle 487" class="shp12" d="M38.8 94.82L192.79 94.81C197.21 94.81 200.79 98.39 200.79 102.81L200.79 103.69C200.79 108.11 197.21 111.69 192.79 111.69L38.79 111.7C34.37 111.7 30.79 108.12 30.8 103.7L30.79 102.82C30.8 98.39 34.36 94.82 38.8 94.82Z" />
+				<path id="Rectangle 488" class="shp12" d="M38.79 128.57L77.05 128.57C81.48 128.57 85.05 132.15 85.05 136.57L85.05 137.45C85.05 141.87 81.48 145.45 77.05 145.45L38.8 145.45C34.37 145.45 30.79 141.88 30.79 137.45L30.79 136.58C30.79 132.15 34.37 128.58 38.79 128.57Z" />
+				<path id="Rectangle 490" class="shp1" d="M35.8 239.49L140.33 239.49C143.1 239.49 145.34 241.73 145.34 244.48L145.33 245.34C145.34 248.1 143.11 250.33 140.34 250.34L35.81 250.35C33.04 250.35 30.8 248.11 30.81 245.34L30.81 244.49C30.8 241.73 33.03 239.49 35.8 239.49Z" />
+				<path id="Rectangle 491" class="shp13" d="M49.48 193.68L137.5 193.68C140.5 193.68 142.92 196.1 142.92 199.1L142.92 199.1C142.92 202.1 140.5 204.52 137.5 204.52L49.49 204.53C46.48 204.53 44.06 202.1 44.06 199.1L44.06 199.1C44.06 196.11 46.49 193.68 49.48 193.68Z" />
+			</g>
+		</g>
+	</g>
+</svg>

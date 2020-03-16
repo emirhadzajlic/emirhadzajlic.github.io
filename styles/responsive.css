@@ -1,0 +1,421 @@
+@media (max-width: 900px){
+    nav{
+        height: 4.5vw;
+    }
+    nav ul li a{
+        font-size: 3vw;
+    }
+    header{
+        top: 2.5vw;
+    }
+    header h1{
+        font-size: 1.3rem;
+    }
+    header button{
+        width: 15vw;
+        font-size: 1rem;
+        padding: 1.2vw 1.5vw;
+    }
+    .intro form{
+        flex-direction: column;
+    }
+    .intro input{
+        width: 35vw;
+        margin-bottom: 1vw;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .intro button{
+        width: 20vw;
+        font-size: 1rem;
+        padding: 1.2vw 1.5vw;
+        position: relative;
+        left: 7vw;
+    }
+    .icons{
+        margin-left: 10vw;
+    }
+    .section-better-work form{
+        flex-direction: column;
+    }
+    .section-better-work input{
+        width: 35vw;
+        margin-bottom: 1vw;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .section-better-work button{
+        width: 20vw;
+        font-size: 1rem;
+        padding: 1.2vw 1.5vw;
+        position: relative;
+        left: 35vw;
+    }
+}
+
+@media (max-width: 750px){
+
+    nav{
+        height: 7vw;
+        border-radius: 0;
+        position: fixed;
+    }
+    nav ul{
+        display: block;
+        width: 50vw;
+        height: 100vh;
+        background: #3a4151;
+        position: relative;
+        left: -100%;
+    }
+    nav ul li{
+        padding-top: 5vw;
+    }
+    nav ul li a{
+        font-size: 5vw;
+        text-align: center;
+        padding: 3vw;
+    }
+    .active{
+        color: #fb5253;
+    }
+    nav ul li a:hover{
+        color: #fb5253;
+    }
+    .menu{
+        font-size: 5vw;
+        display: block;
+        float: right;
+        margin-left: 3vw;
+    }
+    header{
+        top: 7vw;
+    }
+    .intro{
+        position: relative;
+        top: 7vw;
+    }
+    .intro h1{
+        font-size: 5vw;
+        width: 50vw;
+    }
+    .intro p{
+        font-size: 3vw;
+    }
+    
+    .feedback div{
+        flex-direction: column;
+    }
+    .feedback h1{
+        margin-bottom: 10vw;
+        font-size: 5vw;
+    }
+    .feedback img{
+        width: 35vw;
+        margin-bottom: 5vw;
+    }
+    .fb-2{
+        position: relative;
+        left: 17vw;
+    }
+    .fb-3{
+        position: relative;
+        left: 34vw;
+    }
+
+    .side-cards{
+        display: none;
+    }
+    .benefits{
+        margin-top: 25vw;
+    }
+    .helpBenefits{
+        flex-direction: column;
+    }
+    .benefits h1{
+        font-size: 5vw;
+        width: 50vw;
+        margin-bottom: 2vw;
+    }
+    .helpBenefits div{
+        align-items: center;
+    }
+    .helpBenefits h3{
+        font-size: 4vw;
+    }
+    .helpBenefits p{
+        width: 40vw;
+        font-size: 2.3vw;
+    }
+    .helpBenefits img{
+        width: 15vw;
+    }
+
+    .section-why, .section-team{
+        left: 25vw;
+        margin-bottom: 23vw;
+    }
+    .section-why h1, .section-team h1{
+        font-size: 5vw;
+        width: 50vw;
+        text-align: center;
+    }
+    .section-why p, .section-team p{
+        text-align: center;
+        font-size: 3vw;
+        width: 50vw;
+
+    }
+    .section-better-work h1{
+        font-size: 5vw;
+    }
+    .more span{
+        font-size: 4vw;
+    }
+    .icons{
+        position: relative;
+        top: 10vw;
+        left: 17vw;
+    }
+    .element2{
+        top: 270vw;
+    }
+    .circle4{
+        top: 325vw;
+    }
+    .element3{
+        top:350vw;
+        display: block;
+    }
+    .circle6{
+        display: block;
+        top: 405vw;
+    }
+    .circle8{
+        display: block;
+        top:520vw;
+    }
+
+    hr{
+        width: 100vw;
+    }
+    .top{
+        display: none;
+    }
+    .footer-contact h3, .social h3{
+        font-size: 4vw;
+    }
+    .social img{
+        width: 5vw;
+    }
+    .footer-contact p{
+        font-size: 2vw;
+    }
+    .footer-contact button{
+        padding: 1vw 2vw 1vw;
+        font-size: 2.5vw;
+    }
+}
+@media (max-width: 500px){
+    .circle{
+        display: none;
+    }
+    header{
+        top: 13vw;
+    }
+    header button{
+        color: #fb5253;
+        border-color: #fb5253;
+        width: 25vw;
+        padding: 2vw;
+    }
+    header button:hover{
+        color: white;
+    }
+    .intro{
+        margin-top: 10vw;
+        position: relative;
+        top:10vw;
+    }
+    .intro h1{
+        font-size: 9vw;
+        width: 90vw;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 2vw;
+    }
+    .intro p{
+        font-size: 5vw;
+        width: 80vw;
+        margin: auto;
+    }
+    .intro input{
+        margin: auto;
+        margin-bottom: 2vw;
+        width: 60vw;
+        padding: 2vw;
+    }
+    .intro button{
+        left: 30vw;
+        width: 30vw;
+        padding: 2vw;
+    }
+    .icons{
+        display: none;
+    }
+    
+    .benefits{
+        margin: 15vw;
+        position: relative;
+        top: 10vw;
+    }
+    .benefits h1{
+        font-size: 6vw;
+        width: 60vw;
+    }
+    .helpBenefits img{
+        width: 20vw;
+    }
+    .helpBenefits h3{
+        font-size: 4.5vw;
+    }
+    .helpBenefits p{
+        font-size: 4vw;
+        width: 50vw;
+    }
+
+    .section-why{
+        left: 20vw;
+        top: 20vw;
+    }
+    .section-why h1{
+        font-size: 6vw;
+        width: 60vw;
+        text-align: center;
+        
+    }
+    .section-why p{
+        text-align: center;
+        font-size: 4vw;
+        width: 59vw;
+    }
+
+    .more span{
+        font-size: 4vw;
+    }
+
+    .section-team{
+        left: 20vw;
+        top: 10vw;
+    }
+    .section-team h1{
+        font-size: 6vw;
+        width: 60vw;
+        text-align: center;
+    }
+    .section-team p{
+        text-align: center;
+        font-size: 4vw;
+        width: 59vw;
+    }
+
+    .feedback h1{
+        left: 5vw;
+        font-size: 6vw;
+        margin: 20vw 0 15vw 0;
+    }
+
+    .section-better-work h1{
+        font-size: 5vw;
+    }
+    .section-better-work p{
+        width: 50vw;
+    }
+    .section-better-work input{
+        margin-bottom: 2vw;
+        width: 60vw;
+        padding: 2vw;
+        left: 15vw;
+    }
+    .section-better-work button{
+        left: 30vw;
+        width: 30vw;
+        padding: 2vw;
+    }
+    .element1{
+        top: 110vw;
+    }
+    .circle2{
+        top: 165vw;
+    }
+    .circle3{
+        top: 210vw;
+    }
+    .element2{
+        top: 220vw;
+    }
+    .circle4{
+        top: 275vw;
+    }
+    .element4{
+        display: block;
+        top: 495vw;
+    }
+    .circle5{
+        display: block;
+        top: 340vw;
+    }
+    .circle6{
+        top: 410vw;
+    }
+    .element3{
+        top: 355vw;
+    }
+    .circle7{
+        display: block;
+        top: 550vw;
+    }
+    .circle8{
+        top: 620vw;
+    }
+    .footer-contact h3, .social h3{
+        font-size: 4vw;
+        margin-top: 5vw;
+    }
+    .social img{
+        width: 7vw;
+        margin-top: 4vw;
+    }
+    .footer-contact p{
+        font-size: 3vw;
+    }
+    .footer-contact button{
+        padding: 1.5vw 2.5vw 1.5vw;
+        font-size: 4vw;
+    }
+
+
+    nav{
+        border-radius: 0;
+        height: 13vw;
+        position: fixed;
+    }
+    .menu{
+        font-size: 10vw;
+        margin-left: 7vw;
+    }
+    nav ul{
+        display: block;
+        padding-top: 20vw;
+        width: 65vw;
+    }
+    nav ul li{
+        text-align: center;
+        height: 20vw;
+        position: relative;
+        top: 10vw;
+    }
+    nav ul li a{
+        font-size: 8vw;
+    }
+}

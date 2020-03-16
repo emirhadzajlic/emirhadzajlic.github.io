@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 558 399" width="558" height="399">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M-178 -2294L1742 -2294L1742 3016L-178 3016L-178 -2294Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+		.shp1 { fill: none;stroke: #e6ebf0;stroke-linecap:square } 
+		.shp2 { opacity: 0.102;fill: #79828b } 
+		.txt3 { font-size: 25px;fill: #8d99a4;font-family: "" Roboto  Mono"" } 
+		.txt4 { font-size: 21px;fill: #79828b;font-family: "" Poppins"" } 
+		.txt5 { font-size: 47px;fill: #42505c;font-family: "" Poppins"" } 
+		.txt6 { font-size: 21px;fill: #10c172;font-family: "" Poppins"" } 
+		.shp7 { fill: #6271d2 } 
+	</style>
+	<g id="Clip-Path: ::::Home" clip-path="url(#cp1)">
+		<g id="Layer 34">
+			<g id="Rank, Projects">
+				<path id="cardBg" class="shp0" d="M8 0L550 0C554.42 0 558 3.58 558 8L558 390.8C558 395.23 554.42 398.8 550 398.8L8 398.8C3.58 398.8 0 395.23 0 390.8L0 8C0 3.58 3.58 0 8 0Z" />
+				<path id="divider" class="shp1" d="M38.59 222.72L519.41 222.72" />
+				<g id="btc">
+					<path id="Rectangle 6" class="shp2" d="M54.59 305.53L123.9 305.53C132.75 305.53 139.9 312.68 139.9 321.53L139.9 340.99C139.9 349.84 132.75 356.99 123.9 356.99L54.59 356.99C45.75 356.99 38.59 349.84 38.59 340.99L38.59 321.53C38.59 312.68 45.75 305.53 54.59 305.53Z" />
+					<text id="ruby" style="transform: matrix(1,0,0,1,57.89,337.965)" >
+						<tspan x="0" y="0" class="txt3">ruby</tspan>
+					</text>
+				</g>
+				<g id="btc">
+					<path id="Rectangle 6" class="shp2" d="M175.2 305.53L291.14 305.53C299.99 305.53 307.14 312.68 307.14 321.53L307.14 340.99C307.14 349.84 299.99 356.99 291.14 356.99L175.2 356.99C166.35 356.99 159.2 349.84 159.2 340.99L159.2 321.53C159.2 312.68 166.35 305.53 175.2 305.53Z" />
+					<text id="clojure" style="transform: matrix(1,0,0,1,178.496,337.965)" >
+						<tspan x="0" y="0" class="txt3">clojure</tspan>
+					</text>
+				</g>
+				<g id="btc">
+					<path id="Rectangle 6" class="shp2" d="M342.44 305.53L411.75 305.53C420.59 305.53 427.75 312.68 427.75 321.53L427.75 340.99C427.75 349.84 420.59 356.99 411.75 356.99L342.44 356.99C333.59 356.99 326.44 349.84 326.44 340.99L326.44 321.53C326.44 312.68 333.59 305.53 342.44 305.53Z" />
+					<text id="java" style="transform: matrix(1,0,0,1,345.735,337.965)" >
+						<tspan x="0" y="0" class="txt3">java</tspan>
+					</text>
+				</g>
+				<text id="RANK" style="transform: matrix(1,0,0,1,38.594,59.986)" >
+					<tspan x="0" y="0" class="txt4">RANK</tspan>
+				</text>
+				<text id="TOP CATEGORIES" style="transform: matrix(1,0,0,1,38.594,277.075)" >
+					<tspan x="0" y="0" class="txt4">TOP CATEGORIES</tspan>
+				</text>
+				<text id="PROJECTS" style="transform: matrix(1,0,0,1,332.87,59.986)" >
+					<tspan x="0" y="0" class="txt4">PROJECTS</tspan>
+				</text>
+				<text id="607" style="transform: matrix(1,0,0,1,102.916,140.444)" >
+					<tspan x="0" y="0" class="txt5">607</tspan>
+				</text>
+				<text id="45" style="transform: matrix(1,0,0,1,397.193,140.444)" >
+					<tspan x="0" y="0" class="txt5">45</tspan>
+				</text>
+				<text id="You’re in top 40%" style="transform: matrix(1,0,0,1,38.594,182.199)" >
+					<tspan x="0" y="0" class="txt4">You’re in top 40%</tspan>
+				</text>
+				<text id="10 in this month" style="transform: matrix(1,0,0,1,332.87,182.199)" >
+					<tspan x="0" y="0" class="txt6">10 in this month</tspan>
+				</text>
+				<g id="rank">
+					<path id="Oval 8" class="shp7" d="M64.32 146.33C50.09 146.33 38.59 134.83 38.59 120.61C38.59 106.38 50.09 94.88 64.32 94.88C78.55 94.88 90.05 106.38 90.05 120.61C90.05 134.83 78.55 146.33 64.32 146.33Z" />
+					<path id="Star" class="shp0" d="M64.32 129.07L56.37 133.47L57.89 124.16L51.46 117.57L60.35 116.21L64.32 107.74L68.3 116.21L77.19 117.57L70.75 124.16L72.27 133.47L64.32 129.07Z" />
+				</g>
+				<g id="projects">
+					<path id="Oval 8" class="shp7" d="M358.6 146.33C344.37 146.33 332.87 134.83 332.87 120.61C332.87 106.38 344.37 94.88 358.6 94.88C372.83 94.88 384.33 106.38 384.33 120.61C384.33 134.83 372.83 146.33 358.6 146.33Z" />
+					<path id="Fill 1" class="shp0" d="M364.77 131.86L364.77 131.86L362.45 129.45L370.03 121.41L362.45 113.41L364.77 110.96L374.68 121.41L364.77 131.86L364.77 131.86ZM354.04 131.86L354.04 131.86L344.13 121.41L354.04 110.96L356.36 113.41L348.77 121.41L356.36 129.45L354.04 131.86L354.04 131.86Z" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
