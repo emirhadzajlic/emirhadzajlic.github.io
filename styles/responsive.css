@@ -418,4 +418,12 @@
     nav ul li a{
         font-size: 8vw;
     }
+    header h1{
+        position: relative;
+        animation: minemove 1s;
+    }
+    @keyframes minemove{
+        from{left: -10vw;}
+        to {left: 0;}
+    }
 }
