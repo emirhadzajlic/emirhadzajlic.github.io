@@ -267,7 +267,7 @@ nav ul li a:hover{
   }
   @keyframes mymove{
     from{top: -10vw;}
-    to{top: 8vw;}
+    to{top: 12vw;}
   }
   .footer-contact h3, .social h3{
     font-size: 4vw;
