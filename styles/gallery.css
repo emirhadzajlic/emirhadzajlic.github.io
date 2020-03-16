@@ -200,7 +200,13 @@ nav ul{
     margin-right: 2vw;
     text-transform: capitalize;
     color: #fd5353;
+    animation: mymove 1s;
+    position: relative;
 }
+@keyframes mymove{
+    from{top: -10vw;}
+    to{top: 0;}
+  }
 
 .gallery{
     display: flex;
@@ -322,6 +328,10 @@ footer a{
         top: 5vw;
         font-size: 7vw;
     }
+    @keyframes mymove{
+        from{top: -10vw;}
+        to{top: 5vw;}
+      }
     .circle5{
         display: block;
     }
@@ -335,6 +345,10 @@ footer a{
         top: 10vw;
         font-size: 8vw;
     }
+    @keyframes mymove{
+        from{top: -10vw;}
+        to{top: 10vw;}
+      }
     .gallery{
         top: 20vw;
     }
@@ -406,6 +420,10 @@ footer a{
         top: 17vw;
         font-size: 9vw;
     }
+    @keyframes mymove{
+        from{top: -10vw;}
+        to{top: 17vw;}
+      }
     .footer-contact h3, .social h3{
         font-size: 4vw;
         margin-top: 5vw;

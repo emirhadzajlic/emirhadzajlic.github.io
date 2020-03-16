@@ -94,8 +94,13 @@ form button{
   margin-top: 6vw;
   color: #fd5353;
   text-align: center;
+  animation: mymove 1s;
+  position: relative;
 }
-
+@keyframes mymove{
+  from{top: -10vw;}
+  to{top: 0;}
+}
 .circle1{
   z-index: -1;
   border-radius: 50%;
@@ -199,6 +204,10 @@ footer a{
     position: relative;
     top: 5vw; 
   }
+  @keyframes mymove{
+    from{top: -10vw;}
+    to{top: 5vw;}
+  }
   .top{
       display: none;
   }
@@ -255,6 +264,10 @@ nav ul li a:hover{
   }
   .title h1{
     font-size: 8vw;
+  }
+  @keyframes mymove{
+    from{top: -10vw;}
+    to{top: 8vw;}
   }
   .footer-contact h3, .social h3{
     font-size: 4vw;

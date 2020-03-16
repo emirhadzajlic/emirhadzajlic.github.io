@@ -160,13 +160,14 @@ input[type="checkbox"]{
     position: absolute;
     top: 255vw;
     left: 90vw;
-}   
+}  
 .header-card-1{
     position: absolute;
     top: 10vw;
     left: 65vw;
     width: 22vw;
     z-index: 3;
+    animation: mymove1 1s;
 }
 .header-card-2{
     position: absolute;
@@ -176,6 +177,7 @@ input[type="checkbox"]{
     height: 20vw;
     z-index: 2;
     transform: rotate(5deg);
+    animation: mymove2 1s;
 }
 .header-card-3{
     position: absolute;
@@ -184,6 +186,7 @@ input[type="checkbox"]{
     width: 30vw;
     height: 15vw;
     transform: rotate(-10deg);
+    animation: mymove3 1s;
 }
 .header-card-4{
     position: absolute;
@@ -192,6 +195,23 @@ input[type="checkbox"]{
     width: 23vw; 
     height: 23vw;  
     z-index: 1;
+    animation: mymove4 1s;
+}
+@keyframes mymove1{
+    from {top: 0;}
+    to {top: 10vw;}
+} 
+@keyframes mymove2{
+    from {left: 0;}
+    to {left: 50vw;}
+}
+@keyframes mymove3{
+    from {top: 100vw;}
+    to {top: 33vw;}
+}
+@keyframes mymove4{
+    from {left: 100vw;}
+    to {left: 72vw;}
 }
 .side-card-5{
     width: 30vw;
