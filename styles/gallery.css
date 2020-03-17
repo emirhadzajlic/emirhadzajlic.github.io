@@ -318,6 +318,7 @@ footer a{
     footer{
         position: relative;
         top: 10vw;
+        z-index: 0;
     }
     .gallery{
         position: relative;
@@ -420,10 +421,29 @@ footer a{
         top: 17vw;
         font-size: 9vw;
     }
-    @keyframes mymove{
-        from{top: -10vw;}
-        to{top: 17vw;}
-      }
+      * {
+        
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        
+        /* -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important; */
+        
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        }
+        nav ul li a:hover{
+            color: white;
+        }
     .footer-contact h3, .social h3{
         font-size: 4vw;
         margin-top: 5vw;
