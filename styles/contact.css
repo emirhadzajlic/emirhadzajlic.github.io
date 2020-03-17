@@ -133,7 +133,7 @@ form button{
 footer{
     width: 100vw;
     background: #fd5353;
-    z-index:-2;
+    z-index:0;
     padding: 3vw;
 }
 .footer-flex{
