@@ -412,10 +412,10 @@ footer a{
 }
 @media (max-width: 500px){
     footer{
-        top: 20vw;
+        top: 25vw;
     }
     .gallery{
-        top: 20vw;
+        top: 25vw;
     }
     .title h1{
         top: 17vw;
