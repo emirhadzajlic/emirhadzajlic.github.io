@@ -171,17 +171,16 @@ function scrollFunction() {
     document.body.scrollTop > 600 ||
     document.documentElement.scrollTop > 600
   ) {
-    mybutton.style.display = "block";
+    if(window.matchMedia("(max-width: 600px)").mathces){
+      mybutton.style.display = "none";
+    } else{
+      mybutton.style.display = "block";
+    }
   } else {
     mybutton.style.display = "none";
   }
 }
 
-// if(document.querySelectorAll('td').value==='NE'){
-//   document.querySelectorAll('td').style.color='red';
-// }
-
-// When the user clicks on the button, scroll to the top of the table
 async function topFunction() {
   document.body.scrollTop = 430;
   document.documentElement.scrollTop = 430;
