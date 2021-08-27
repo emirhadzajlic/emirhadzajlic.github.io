@@ -167,18 +167,18 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (
-    document.body.scrollTop > 600 ||
-    document.documentElement.scrollTop > 600
-  ) {
-    if(window.matchMedia("(max-width: 600px)").mathces){
-      mybutton.style.display = "none";
-    } else{
-      mybutton.style.display = "block";
-    }
-  } else {
-    mybutton.style.display = "none";
-  }
+  // if (
+  //   document.body.scrollTop > 600 ||
+  //   document.documentElement.scrollTop > 600
+  // ) {
+  //   if(window.matchMedia("(max-width: 600px)").mathces){
+  //     mybutton.style.display = "none";
+  //   } else{
+  //     mybutton.style.display = "block";
+  //   }
+  // } else {
+  //   mybutton.style.display = "none";
+  // }
 }
 
 async function topFunction() {
