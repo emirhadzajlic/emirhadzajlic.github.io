@@ -59,7 +59,7 @@
     .erow{
         width: 100%;
     }
-    .form-control{
-        height: 50px;
+    .container form .form-control{
+        height: 100px;
     }
 }
