@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RealBau</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <header>
+        <span class="logo">RealBau</span>
+    </header>
+
+    <div class="container">
+        
+        <form>
+            <h1>Login</h1>
+            <hr>
+            <div class="form-group">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" class="form-control" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="fpass">Password</label>
+                <input type="password" id="fpass" class="form-control" name="password" required>
+            </div>
+            <input onclick="login()" id="loginBtn" type="button" class="btn" value="login">
+        </form>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

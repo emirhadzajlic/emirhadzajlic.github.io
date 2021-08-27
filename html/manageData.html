@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealBau</title>
+    <link rel="stylesheet" href="../css/manageData.css">
+    <script src="../js/auth.js"></script>
+    <script src="../js/logout.js"></script>
+
+</head>
+<body>
+    <header>
+        <span class="logo">RealBau</span>
+
+          <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+
+            <ul class="menu-nav">
+                <li class="nav-item current">
+                    <a href="./proba.html" class="nav-link">
+                        Data Filter</a>
+                </li>
+ 
+                <li class="nav-item">
+                    <a href="./manageAcc.html" class="nav-link">
+                        Manage Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./addAcc.html" class="nav-link">Add Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./manageData.html" class="nav-link active">Manage Data</a>
+                </li>
+                <li class="nav-item logout">
+                    <a onclick="logout()" class="nav-link">Logout</a>
+                </li>
+            </ul>
+            <div class="userDataMenu">
+                <h3>Emir Hadzajlic</h3>
+                <p>Created: 13.08.2021</p>
+                
+            </div>      
+        </nav>
+    </header>
+    <table class="styled-table" id="tblStocks">
+        <thead>
+            <tr>
+                <th class="fth">Tiefbau</th>
+                <th>Vermessung</th>
+                <th>Verr. date</th>
+                <th>First Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>HausNO</th>
+                <th>Suppl</th>
+                <th>Unit</th>
+                <th>Areapop</th>
+                <th class="lth">DP</th>
+            </tr>
+        </thead>
+        <tbody id="tablebodylol">
+            <tr>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>dd.mm.yy</td>
+                <td>Marko</td>
+                <td>Markovic</td>
+                <td>Bijelo Polje</td>
+                <td>ul Slobodana Penezica</td>
+                <td>14</td>
+                <td>A</td>
+                <td>2</td>
+                <td>www-01</td>
+                <td>34</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container">
+        
+    </div>
+
+
+    <script src="../js/mAccProba.js"></script>
+</body>
+</html>

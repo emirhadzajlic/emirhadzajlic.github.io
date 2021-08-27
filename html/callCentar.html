@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RealBau</title>
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/callCentar.css">
+    <script src="../js/auth.js"></script>
+    <script src="../js/logout.js"></script>
+</head>
+
+<body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <header>
+        <span class="logo">RealBau</span>
+        <!-- <input type="checkbox" id="ham-menu">
+        <label for="ham-menu">  
+            <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+
+          <div class="ham-menu">
+            <ul>
+              <li>Vermessung</li>
+              <li>Manage Account</li>   
+            </ul>
+            <h3>Emir Hadzajlic</h3>
+          </div> -->
+
+
+
+          <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+
+            <ul class="menu-nav">
+                <li class="nav-item current">
+                    <a href="#" class="nav-link active">
+                        Data Filter</a>
+                </li>
+ 
+                <li class="nav-item">
+                    <a href="./manageAcc.html" class="nav-link">
+                        Manage Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./addAcc.html" class="nav-link">Add Account</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./manageData.html" class="nav-link">Manage Data</a>
+                </li>
+                <li class="nav-item logout">
+                    <a onclick="logout()" class="nav-link">Logout</a>
+                </li>
+            </ul>
+            <div class="userDataMenu">
+                <h3>Emir Hadzajlic</h3>
+                <p>Created: 13.08.2021</p>
+                
+            </div>  
+            
+        </nav>
+
+
+
+        <!-- <a href="login.html">Logout</a> -->
+        <!-- <a href="">Manage Account (Korisnik)</a> -->
+    </header>
+
+    
+
+    <div class="container">
+        <button onclick="topFunction()" id="myBtn" title="Top Table"><span class="arrow">></span></button>
+        <form action="http://localhost:8080/proba" method="POST" target="_blank">
+            <h1>INFO</h1>
+            <hr>
+            <div class="form-group">
+                <div class="formFlex">
+                    <label for="fname">Ime</label><br>
+                    <input type="text" id="fname" class="form-control" name="FirstName">
+                </div>
+                <div class="formFlex">
+                    <label for="flname">Prezime</label><br>
+                    <input type="text" id="flname" class="form-control" name="Surname">
+                </div>
+                <div class="formFlex">
+                    <label for="fcoid">CO ID</label><br>
+                    <input type="text" id="fcoid" class="form-control" name="CoId">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="formFlex">
+                    <label for="fcity">Grad</label><br>
+                    <input type="text" id="fcity" class="form-control" name="City">
+                </div>
+                <div class="formFlex">
+                    <label for="fstreet">Ulica</label><br>
+                    <input type="text" id="fstreet" class="form-control" name="Street">
+                </div>
+                <div class="formFlex">
+                    <label for="fnum">Broj</label><br>
+                    <input type="text" id="fnum" class="form-control" name="number">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="formFlex">
+                    <label for="fdp">DP No</label><br>
+                    <input type="text" id="fdp" class="form-control" name="DpNo">
+                </div>
+                <div class="formFlex">
+                    <label for="fstatus">Status</label><br>
+                    <select name="Status" id="fstatus" class="form-control">
+                        <option value="">Odaberi opciju</option>
+                        <option value="new">NEW</option>
+                        <option value="denied">DENIED</option>
+                        <option value="nachanschluss">NACHANSCHLUSS</option>
+                        <option value="Projectaansluiting">Projectaansluiting</option>
+                    </select>
+                </div> 
+                <div class="formFlex">
+                    <label for="ftel">Telefon</label><br>
+                    <input type="text" id="ftel" class="form-control" name="Tel">
+                </div>    
+            </div>
+
+            <div class="form-group">
+                <div class="formFlex">
+                    <label for="fpop" style="font-weight: bold;">Area POP</label><br>
+                    <input type="text" id="fpop" class="form-control" style="background-color: rgba(202, 202, 202, 0.308);" name="AreaPop">
+                </div>
+                <div class="formFlex">
+                    <label for="ftzip">TZIP</label><br>
+                    <input type="text" id="ftzip" class="form-control" name="Tzip">
+                </div>
+                <div class="formFlex">
+                    <label for="femail">Email</label><br>
+                    <input type="email" id="femail" class="form-control" name="Email">
+                </div>
+            </div>
+            
+            <h1>FILTER</h1>
+            <hr>
+
+            <div>
+                <div class="radioPart">
+                <div class="filterRow">
+                    <div class="radioFinish">
+                        <p>HB Finish:</p>
+
+                            <input type="radio" id="hb_finish_yes" value="da" name="hbfinish">
+                            <label for="hb_finish_yes">Yes</label>
+
+                            <input type="radio" id="hb_finish_no" value="ne" name="hbfinish">
+                            <label for="hb_finish_no">No</label>
+
+                    </div>
+
+                    <div class="radioFinish">
+                        <p>DP Finish:</p>
+
+                            <input type="radio" id="dp_finish_yes" value="da" name="dpfinish">
+                            <label for="dp_finish_yes">Yes</label>
+
+                            <input type="radio" id="dp_finish_no" value="ne" name="dpfinish">
+                            <label for="dp_finish_no">No</label>
+
+                    </div>
+
+                    <div class="radioFinish">
+                        <p>POP Finish:</p>
+
+                            <input type="radio" id="pop_finish_yes" value="da" name="popfinish">
+                            <label for="pop_finish_yes">Yes</label>
+
+                            <input type="radio" id="pop_finish_no" value="ne" name="popfinish">
+                            <label for="pop_finish_no">No</label>
+
+                    </div>
+
+                    <div class="radioFinish">
+                        <p>TFB Finish:</p>
+
+                            <input type="radio" id="tfb_finish_yes" value="da" name="tfbfinish">
+                            <label for="tfb_finish_yes">Yes</label>
+
+                            <input type="radio" id="tfb_finish_no" value="ne" name="tfbfinish">
+                            <label for="tfb_finish_no">No</label>
+
+                    </div>
+                </div>
+
+                <div class="filterRow">
+                    <div class="radioFinish">
+                        <p>Faza Finish:</p>
+
+                            <input type="radio" id="faza_finish_yes" value="da" name="fazafinish">
+                            <label for="faza_finish_yes">Yes</label>
+
+                            <input type="radio" id="faza_finish_no" value="ne" name="fazafinish">
+                            <label for="faza_finish_no">No</label>
+
+                    </div>
+
+                    <div class="radioFinish">
+                        <p>M Finish:</p>
+
+                            <input type="radio" id="m_finish_yes" value="da" name="mfinish">
+                            <label for="m_finish_yes">Yes</label>
+
+                            <input type="radio" id="m_finish_no" value="ne" name="mfinish">
+                            <label for="m_finish_no">No</label>
+
+                    </div>
+
+                    <div class="radioFinish">
+                        <p>AKT Finish:</p>
+
+                            <input type="radio" id="akt_finish_yes" value="da" name="aktfinish">
+                            <label for="akt_finish_yes">Yes</label>
+
+                            <input type="radio" id="akt_finish_no" value="ne" name="aktfinish">
+                            <label for="akt_finish_no">No</label>
+
+                    </div>
+
+                    <div class="radioFinish">
+                        <p>V Finish:</p>
+
+                            <input type="radio" id="ver_finish_yes" value="da" name="verfinish">
+                            <label for="ver_finish_yes">Yes</label>
+  
+                            <input type="radio" id="ver_finish_no" value="ne" name="verfinish">
+                            <label for="ver_finish_no">No</label>
+                    </div>
+                </div>
+            </div>
+                <div class="filterRow filterRowB">
+
+                    <div class="rowFlex">
+                        <label for="hb_vom_filter">HB Vom</label>
+                        <input type="text" id="hb_vom_filter" class="form-control" name="HbVom">
+                    </div>
+
+                    <div class="rowFlex">
+                        <label for="tfb_vom_filter">TFB Vom</label>
+                        <input type="text" id="tfb_vom_filter" class="form-control" name="TfbVom">
+                    </div>
+
+                    <div class="rowFlex">
+                        <label for="faza_vom_filter">Faza Vom</label>
+                        <input type="text" id="faza_vom_filter" class="form-control" name="FazaVom">
+                    </div>
+
+                    <div class="rowFlex">
+                        <label for="dpg_vom_filter">DPG Vom</label>
+                        <input type="text" id="dpg_vom_filter" class="form-control" name="DpgVom">
+                    </div>
+
+                </div>
+
+                <div class="filterRow filterRowB">
+
+                    <div class="rowFlex">
+                        <label for="pop_vom_filter">POP Vom</label>
+                        <input type="text" id="pop_vom_filter" class="form-control" name="PopVom">
+                    </div>
+
+                    <div class="rowFlex">
+                        <label for="m_vom_filter">M Vom</label>
+                        <input type="text" id="m_vom_filter" class="form-control" name="MVom">
+                    </div>
+
+                    <div class="rowFlex">
+                        <label for="a_vom_filter">A Vom</label>
+                        <input type="text" id="a_vom_filter" class="form-control" name="AVom">
+                    </div>
+
+                    <div class="rowFlex"></div>
+
+                </div>
+
+            </div>
+            <hr>
+            <!-- <input onclick="search()" type="submit" class="btn" name="submit" value="Pretraga"> -->
+            <input onclick="search()" type="button" class="btn" name="submit" value="Pretraga" />
+        </form>
+    </div>
+
+        <!-- <div class="buttonsPart">
+                <button onclick="fnExcelReport()" target="_blank">
+                <span class="glyphicon glyphicon-download"></span>
+                Download Excel</button>
+                <iframe id="txtArea1" style="display:none"></iframe>
+        </div> -->
+    
+    <!-- <div onmouseleave="opacityLeave()" onmouseover="opacityHover()" id="manageDataCont"> -->
+    <div id="manageDataCont">
+        <h1 id="inpName"></h1>
+        <hr>
+        <button onclick="removeInp()" id="btnX">X</button>
+        <form id="inputsCont" action="http://localhost:8080/updateData" method="POST">
+
+            <div class="inpRow">
+                <div>
+                    <label for="hb_datum">HB Datum</label>
+                    <input type="text" id="hb_datum" placeholder="dd.mm.yyyy">
+                </div>
+                <div>
+                    <label for="hb_termin">HB Termin</label>
+                    <input type="text" id="hb_termin" placeholder="hh:mm-hh:mm">
+                </div>
+                <div>
+                    <label for="hb_finish">HB Finish</label>
+                    <input type="text" id="hb_finish" placeholder="DA/NE">
+                </div>
+                <div>
+                    <label for="hb_vom">HB Vom</label>    
+                    <input type="text" id="hb_vom" placeholder="Name">
+                </div>
+            </div>
+            <div class="inpRow">
+                <div>
+                    <label for="hb_call">HB Call Date</label>
+                    <input type="text" id="hb_call" placeholder="dd.mm.yyyy">
+                </div>
+                <div>
+                    <label for="tfb_datum">TFB Datum</label>
+                    <input type="text" id="tfb_datum" placeholder="dd.mm.yyyy">
+                </div>
+                <div>
+                    <label for="tfb_finish">TFB Finish</label>
+                    <input type="text" id="tfb_finish" placeholder="DA/NE">
+                </div>
+                <div>
+                    <label for="tfb_meter">TFB Meter</label>    
+                    <input type="text" id="tfb_meter" placeholder="Nubmer">
+                </div>
+            </div>
+            <div class="inpRow">
+                <div>
+                    <label for="tfb_vom">TFB Vom</label>
+                    <input type="text" id="tfb_vom" placeholder="Name">
+                </div>
+                <div>
+                    <label for="faser_datum">Faser Datum</label>
+                    <input type="text" id="faser_datum" placeholder="dd.mm.yyyy">
+                </div>
+                <div>
+                    <label for="faser_finish">Faser Finish</label>
+                    <input type="text" id="faser_finish" placeholder="DA/NE">
+                </div>
+                <div>
+                    <label for="faser_vom">Faser Vom</label>    
+                    <input type="text" id="faser_vom" placeholder="Name">
+                </div>
+            </div>
+            <div class="inpRow">
+                <div>
+                    <label for="montage_datum">Montage Datum</label>
+                    <input type="text" id="montage_datum" placeholder="dd.mm.yyyy">
+                </div>
+                <div>
+                    <label for="montage_termin">Montage Termin</label>
+                    <input type="text" id="montage_termin" placeholder="hh:mm-hh:mm">
+                </div>
+                <div>
+                    <label for="montage_call">Montage Call Date</label>
+                    <input type="text" id="montage_call" placeholder="dd.mm.yyyy">
+                </div>
+                <div>
+                    <label for="montage_finish">Montage Finish</label>    
+                    <input type="text" id="montage_finish" placeholder="DA/NE">
+                </div>
+            </div>
+            <div class="inpRow">
+                <div>
+                    <label for="montage_vom">Montage Vom</label>
+                    <input type="text" id="montage_vom" placeholder="Name">
+                </div>
+                <div>
+                    <label for="akt_datum">Aktivirung Datum</label>
+                    <input type="text" id="akt_datum" placeholder="dd.mm.yyyy">
+                </div>
+                <div>
+                    <label for="akt_termin">Aktivirung Termin</label>
+                    <input type="text" id="akt_termin" placeholder="hh:mm-hh:mm">
+                </div>
+                <div>
+                    <label for="akt_finish">Aktivirung Finish</label>    
+                    <input type="text" id="akt_finish" placeholder="DA/NE">
+                </div>
+            </div>
+            <div class="inpRow">
+                <div>
+                    <label for="akt_vom">Aktivirung Vom</label>
+                    <input type="text" id="akt_vom" placeholder="Name">
+                </div>
+                <div>
+                    <label for="ver_datum">Vermessung Datum</label>
+                    <input type="text" id="ver_datum" placeholder="dd.mm.yyyy">
+                </div>
+                <div>
+                    <label for="ver_finish">Vermessung Finish</label>
+                    <input type="text" id="ver_finish" placeholder="DA/NE">
+                </div>
+                <div>
+                    <label for="ver_vom">Vermessung Vom</label>    
+                    <input type="text" id="ver_vom" placeholder="Name">
+                </div>
+            </div>
+            <div class="inpRow">
+                <div>
+                    <label for="ticket_datum">Ticket Datum</label>
+                    <input type="text" id="ticket_datum" placeholder="dd.mm.yyyy">
+                </div>
+                <div>
+                    <label for="ticket_termin">Ticket Termin</label>
+                    <input type="text" id="ticket_termin" placeholder="hh:mm-hh:mm">
+                </div>
+                <div>
+                    <label for="ticket_finish">Ticket Finish</label>    
+                    <input type="text" id="ticket_finish" placeholder="DA/NE">
+                </div>
+                <div>
+                    <label for="comment">Comment</label>    
+                    <input type="text" id="comment" placeholder="">
+                </div>
+            </div>
+            <hr/>
+            <input onclick="updateData()" type="button" value="Unesi Podatke" id="mngDataBtn">
+        </form>
+    </div>
+
+
+    <hr class="hrr">
+    <table class="styled-table" id="tblStocks">
+        <thead>
+            <tr>
+                <!-- <th class="fth">Tiefbau</th> -->
+                <!-- <th>Vermessung</th> -->
+                <!-- <th>Verr. date</th> -->
+                <th style="border-top-left-radius: 4px;">First Name</th>
+                <th>Surname</th>
+                <!-- <th>Email</th> -->
+                <th>Phone</th>
+                <th>City</th>
+                <th>Street</th>
+                <th>HouseNo</th>
+                <th>AreaPop</th>
+                <th>DP</th>
+                <!-- <th>HB Finish</th>
+                <th>TFB Finish</th> -->
+                <th style="border-top-right-radius: 4px;">EDIT</th>
+                <!-- <th>HausNO</th> -->
+                <!-- <th>Suppl</th> -->
+                <!-- <th>Unit</th> -->
+                <!-- <th>Areapop</th> -->
+                <!-- <th class="lth">DP</th> -->
+            </tr>
+        </thead>
+        <tbody id="tablebodylol"></tbody>
+    </table>
+
+    <script>
+        // Select dom items
+        const menuBtn =
+            document.querySelector(".menu-btn");
+ 
+        const menu =
+            document.querySelector(".menu");
+ 
+        const menuNav =
+            document.querySelector(".menu-nav");
+ 
+        // const menuBranding =
+            // document.querySelector(".menu-branding");
+
+        const navItems =
+            document.querySelectorAll(".nav-item");
+ 
+        // Set the initial state of the menu
+        let showMenu = false;
+ 
+        menuBtn.addEventListener("click", toggleMenu);
+ 
+        function toggleMenu() {
+            if (!showMenu) {
+                menuBtn.classList.add("close");
+                menu.classList.add("show");
+                menuNav.classList.add("show");
+                // menuBranding.classList.add("show");
+                navItems.forEach((item) =>
+                    item.classList.add("show"));
+ 
+                // Reset the menu state
+                showMenu = true;
+            } else {
+                menuBtn.classList.remove("close");
+                menu.classList.remove("show");
+                menuNav.classList.remove("show");
+                // menuBranding.classList.remove("show");
+                navItems.forEach((item) =>
+                    item.classList.remove("show"));
+ 
+                // Reset the menu state
+                showMenu = false;
+            }
+        }
+    </script> 
+    <script src="../js/callCentar.js"></script>
+</body>
+
+</html>

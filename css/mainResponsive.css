@@ -1,0 +1,65 @@
+@media only screen and (max-width: 600px) {
+    .container{
+        margin-top: 90px;
+    }
+    header span{
+        /* top: 9px; */
+        left: 25px;
+    }
+    .menu-btn {
+        right: 30px;
+    }
+    .menu {
+        width: 75%;
+    }
+    .container form .btn{
+        width: 100%;
+    }
+    .moreInpBtn{
+        margin: auto;
+    }
+    .xxx{
+        display: none;
+    }  
+    .styled-table {
+        font-size: 12px;
+    }  
+    .yesIcon{
+        width: 22px;
+        height: 22px;
+    }
+    .noIcon{
+        width: 20px;
+        height: 20px;
+    }
+    .styled-table th{
+        height: 50px;
+    }
+    .styled-table td{
+        height: 50px;
+    }
+    .srow{
+        flex-direction: column;
+    }
+    .erow{
+        /* flex-direction: column; */
+    }
+    .frow{
+        flex-direction: column;
+    }
+    .trow{
+        /* flex-direction: column; */
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .nrow{
+        width: 100%;
+    }
+    .erow{
+        width: 100%;
+    }
+    .form-control{
+        /* width: 100%; */
+    }
+}
