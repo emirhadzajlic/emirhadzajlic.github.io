@@ -15,8 +15,9 @@
     }
     .container form .btn{
         width: 100%;
+        height: 40px;
     }
     .container form .form-control{
-        height: 50px;
+        height: 40px;
     }
 }
