@@ -19,8 +19,11 @@
     .moreInpBtn{
         margin: auto;
     }
+    .hrr{
+        margin: 30px auto 30px auto;
+    }
     .filterArrow{
-        bottom: 0px;
+        bottom: -5px;
     }
     .xxx{
         display: none;
