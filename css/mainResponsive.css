@@ -19,6 +19,9 @@
     .moreInpBtn{
         margin: auto;
     }
+    .filterArrow{
+        bottom: 0px;
+    }
     .xxx{
         display: none;
     }  
