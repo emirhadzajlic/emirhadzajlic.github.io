@@ -4,7 +4,7 @@ function deleteToken(){
   }
   
   function logout(){
-    fetch(url+"/logout", {
+    fetch("https://realbauback.herokuapp.com/logout", {
       method:"GET",
       headers:{
         'authorization':getCookie('token'),

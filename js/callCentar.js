@@ -47,7 +47,7 @@ function search(){
     dataToSend.VermessungFinish = document.querySelector('input[name="verfinish"]:checked').value;
   }
   
-  fetch(url+"/proba", {
+  fetch("https://realbauback.herokuapp.com/proba", {
 	  method: 'POST',
 	  headers: {
 		  'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ function search(){
 
 let url2 = "http://localhost:8080/tableAll";
 
-fetch(url+"tableAll",{
+fetch("https://realbauback.herokuapp.com/tableAll",{
   method:"POST",
   headers:{
     'authorization':getCookie("token")
@@ -185,7 +185,7 @@ function updateData(){
   dataToSend.TICKETFINISH = document.getElementById("ticket_finish").value;
   dataToSend.COMMENT = document.getElementById("comment").value;
   
-  fetch(url+"/updateData", {
+  fetch("https://realbauback.herokuapp.com/updateData", {
 	  method: 'POST',
 	  headers:{
       'Content-Type': 'application/json',

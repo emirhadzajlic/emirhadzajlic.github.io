@@ -1,4 +1,4 @@
-let url = "https://realbauback.herokuapp.com";
+// let url = "https://realbauback.herokuapp.com";
 
 function getCookie(cname) {
     let name = cname + "=";
@@ -15,7 +15,7 @@ function getCookie(cname) {
     return "";
   }
   
-fetch(url+"/auth", {
+fetch("https://realbauback.herokuapp.com/auth", {
     method:"POST",
     headers:{
       'authorization':getCookie('token'),

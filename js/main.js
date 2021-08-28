@@ -70,7 +70,7 @@ function search(){
     dataToSend.VermessungFinish = document.querySelector('input[name="verfinish"]:checked').value;
   }
   
-  fetch(url+"/proba", {
+  fetch("https://realbauback.herokuapp.com/proba", {
 	  method: 'POST',
 	  headers: {
 		  'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ function search(){
 
 let url2 = "http://localhost:8080/tableAll";
 
-fetch(url+"/tableAll",{
+fetch("https://realbauback.herokuapp.com/tableAll",{
   method:"POST",
   headers:{
     'authorization':getCookie("token")

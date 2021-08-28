@@ -16,7 +16,7 @@ function getCookie(cname) {
   }
 
 function auth(){
-  fetch(url+"/auth", {
+  fetch("https://realbauback.herokuapp.com/auth", {
     method:"POST",
     headers:{
       'authorization':getCookie('token'),
@@ -57,7 +57,7 @@ function login(){
     let dataToSend = [];
     dataToSend[0] = document.querySelector('input[name="email"]').value;
     dataToSend[1] = document.querySelector('input[name="password"]').value;
-      fetch(url+"/login",{
+      fetch("https://realbauback.herokuapp.com/login",{
           method:"POST",
           body:JSON.stringify(dataToSend),
           credentials: 'same-origin',

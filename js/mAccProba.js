@@ -57,7 +57,7 @@ function manageAcc(){
   dataToSend.Password2 = document.querySelector('input[name="changePassword2"]').value;
   document.getElementById('pomocni').style.color = 'green'
   if(dataToSend.Password === dataToSend.Password2){
-    fetch(url+"/manage",{
+    fetch("https://realbauback.herokuapp.com/manage",{
         method:"POST",
         body:JSON.stringify(dataToSend),
         headers: { 'content-type': 'application/json' } 
@@ -86,7 +86,7 @@ function addAcc(){
   document.getElementById('pomocni').style.color = 'green'
   if(dataToSend[4] === document.querySelector('input[name="Password2"]').value){
     console.group(dataToSend)
-    fetch(url+"/register",{
+    fetch("https://realbauback.herokuapp.com/register",{
         method:"POST",
         body:JSON.stringify(dataToSend),
         headers: { 
