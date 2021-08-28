@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RealBau</title>
     <link rel="stylesheet" href="../css/addAcc.css">
-    <link rel="stylesheet" href="../css/manageAccResp.css">
     <script src="../js/auth.js"></script>
     <script src="../js/logout.js"></script>
 </head>
@@ -24,7 +23,7 @@
 
             <ul class="menu-nav">
                 <li class="nav-item current">
-                    <a href="../index.html" class="nav-link">
+                    <a href="./main.html" class="nav-link">
                         Data Filter</a>
                 </li>
  
@@ -35,9 +34,9 @@
                 <li class="nav-item">
                     <a href="./addAcc.html" class="nav-link active">Add Account</a>
                 </li>
-                <!-- <li class="nav-item">
+                <li class="nav-item">
                     <a href="./manageData.html" class="nav-link">Manage Data</a>
-                </li> -->
+                </li>
                 <li class="nav-item logout">
                     <a onclick="logout()" class="nav-link">Logout</a>
                 </li>
@@ -71,11 +70,11 @@
                 <label for="fstatus">Uloga</label><br>
                 <select name="Roll" id="fstatus" class="form-control" required>
                     <option disabled selected value>Odaberi ulogu</option>
-                    <option value="hb">Hausbegehung</option>
-                    <option value="tb">Tiefbau</option>
-                    <option value="fe">Faser Einblasen</option>
-                    <option value="ma">Montage & Aktievirung</option>
-                    <option value="vr">Vermessung</option>
+                    <option value="hausbegehung">Hausbegehung</option>
+                    <option value="tiefbau">Tiefbau</option>
+                    <option value="faser">Faser Einblasen</option>
+                    <option value="mia">Montage & Aktievirung</option>
+                    <option value="vermessung">Vermessung</option>
                     <option value="ad">Admin</option>
                     <option value="cc">Call Centar</option>
                 </select>

@@ -55,12 +55,6 @@
                     <a href="./html/manageAcc.html" class="nav-link">
                         Manage Account</a>
                 </li>
-                <li class="nav-item">
-                    <a href="./html/addAcc.html" class="nav-link">Add Account</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a href="./html/manageData.html" class="nav-link">Manage Data</a>
-                </li> -->
                 <li class="nav-item logout">
                     <a onclick="logout()" class="nav-link">Logout</a>
                 </li>
@@ -111,47 +105,13 @@
                     </div>
                 </div>
                 <div class="trow">
-                    <div class="xrow">
-                        <div class="radioFinish">
-                            <p>HB Finish</p>
-        
-                            <input type="radio" id="hb_finish_yes" value="da" name="hbfinish">
-                            <label for="hb_finish_yes">Yes</label>
-        
-                            <input type="radio" id="hb_finish_no" value="ne" name="hbfinish">
-                            <label for="hb_finish_no">No</label>
-                        </div>
-        
-                        <div class="radioFinish">
-                            <p>TFB Finish</p>
-        
-                            <input type="radio" id="tfb_finish_yes" value="da" name="tfbfinish">
-                            <label for="tfb_finish_yes">Yes</label>
-        
-                            <input type="radio" id="tfb_finish_no" value="ne" name="tfbfinish">
-                            <label for="tfb_finish_no">No</label>
-                        </div>
+                    <div class="xrow basic-radios">
+                        
                     </div>
                 </div>
             </div>
             <hr>
             <button onclick="displayMoreFilters()" type="button" class="moreInpBtn"><span class="filterArrow"><</span></button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <div id="moreInputs">
                 <hr>
@@ -239,7 +199,30 @@
                         </div>
                     </div>
 
+                    
+
                     <div class="trow">
+                        <div class="xrow">
+                            <div class="radioFinish HBFinish">
+                                <p>HB Finish</p>
+            
+                                <input type="radio" id="hb_finish_yes" value="da" name="hbfinish">
+                                <label for="hb_finish_yes">Yes</label>
+            
+                                <input type="radio" id="hb_finish_no" value="ne" name="hbfinish">
+                                <label for="hb_finish_no">No</label>
+                            </div>
+            
+                            <div class="radioFinish TIEFBAUFINISH">
+                                <p>TFB Finish</p>
+            
+                                <input type="radio" id="tfb_finish_yes" value="da" name="tfbfinish">
+                                <label for="tfb_finish_yes">Yes</label>
+            
+                                <input type="radio" id="tfb_finish_no" value="ne" name="tfbfinish">
+                                <label for="tfb_finish_no">No</label>
+                            </div>
+                        </div>
                         <div class="xrow">
                             <div class="radioFinish">
                                 <p>DP Finish:</p>
@@ -264,7 +247,7 @@
                             </div>
                         </div>
                         <div class="xrow">
-                            <div class="radioFinish">
+                            <div class="radioFinish FFINISH">
                                 <p>Faza Finish:</p>
         
                                     <input type="radio" id="faza_finish_yes" value="da" name="fazafinish">
@@ -275,7 +258,7 @@
         
                             </div>
             
-                            <div class="radioFinish">
+                            <div class="radioFinish MFINISH">
                                 <p>M Finish:</p>
         
                                     <input type="radio" id="m_finish_yes" value="da" name="mfinish">
@@ -287,20 +270,18 @@
                             </div>
                         </div>
                         <div class="xrow">
-                            <div class="radioFinish">
-                                <div class="radioFinish">
-                                    <p>AKT Finish:</p>
-            
-                                        <input type="radio" id="akt_finish_yes" value="da" name="aktfinish">
-                                        <label for="akt_finish_yes">Yes</label>
-            
-                                        <input type="radio" id="akt_finish_no" value="ne" name="aktfinish">
-                                        <label for="akt_finish_no">No</label>
-            
-                                </div>
+                            <div class="radioFinish AKTIVIRUNGFINISH">
+                                <p>AKT Finish:</p>
+        
+                                    <input type="radio" id="akt_finish_yes" value="da" name="aktfinish">
+                                    <label for="akt_finish_yes">Yes</label>
+        
+                                    <input type="radio" id="akt_finish_no" value="ne" name="aktfinish">
+                                    <label for="akt_finish_no">No</label>
+        
                             </div>
             
-                            <div class="radioFinish">
+                            <div class="radioFinish VermessungFinish">
                                 <p>V Finish:</p>
         
                                     <input type="radio" id="ver_finish_yes" value="da" name="verfinish">
@@ -548,25 +529,25 @@
     <table class="styled-table" id="tblStocks">
         <thead>
             <tr>
-                <!-- <th class="fth">Tiefbau</th> -->
-                <!-- <th>Vermessung</th> -->
-                <!-- <th>Verr. date</th> -->
-                <th>HBFinish</th>
-                <th>TFBFinish</th>
-                <th style='display:none'>First Name</th>
-                <th style='display:none'>Surname</th>
-                <!-- <th>Email</th> -->
-                <th style='display:none'>Phone</th>
+                <!-- <th class="fth">Tiefbau</th> 
+                 <th>Vermessung</th> 
+                 <th>Verr. date</th> 
+                <th>HB Finish</th>
+                <th>TFB Finish</th>
+                <th>First Name</th>
+                <th>Surname</th>
+                 <th>Email</th> 
+                <th>Phone</th>
                 <th>City</th>
                 <th>Street</th>
-                <th>No</th>
-                <th style='display:none'>AreaPop</th>
-                <th style='display:none' class="xxx">DP</th>
-                <!-- <th>HausNO</th> -->
-                <!-- <th>Suppl</th> -->
-                <!-- <th>Unit</th> -->
-                <!-- <th>Areapop</th> -->
-                <!-- <th class="lth">DP</th> -->
+                <th>HouseNo</th>
+                <th>AreaPop</th>
+                <th>DP</th>
+                 <th>HausNO</th> 
+                 <th>Suppl</th> 
+                 <th>Unit</th> 
+                 <th>Areapop</th> 
+                 <th class="lth">DP</th> -->
             </tr>
         </thead>
         <tbody id="tablebodylol"></tbody>
@@ -618,7 +599,7 @@
             }
         }
     </script> 
-    <script src="./js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
