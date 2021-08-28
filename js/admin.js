@@ -1,3 +1,5 @@
+let url = "https://realbauback.herokuapp.com";
+
 function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(';');
@@ -15,7 +17,7 @@ function getCookie(cname) {
 
 let userId = 1;
 
-let url = "http://localhost:8080/proba";
+// let url = "http://localhost:8080/proba";
 
 // console.log("loading");
 
@@ -68,7 +70,7 @@ function search(){
     dataToSend.VermessungFinish = document.querySelector('input[name="verfinish"]:checked').value;
   }
   
-  fetch("http://localhost:8080/proba", {
+  fetch(url+"/proba", {
 	  method: 'POST',
 	  headers: {
 		  'Content-Type': 'application/json',
@@ -115,7 +117,7 @@ function search(){
 
 let url2 = "http://localhost:8080/tableAll";
 
-fetch(url2,{
+fetch(url+"/tableAll",{
   method:"POST",
   headers:{
     'authorization':getCookie("token")

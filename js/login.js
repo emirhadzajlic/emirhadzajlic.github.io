@@ -1,3 +1,5 @@
+let url = "https://realbauback.herokuapp.com";
+
 function getCookie(cname) {
     let name = cname + "=";
     let ca = document.cookie.split(';');
@@ -14,7 +16,7 @@ function getCookie(cname) {
   }
 
 function auth(){
-  fetch("https://real-bau.herokuapp.com/auth", {
+  fetch(url+"/auth", {
     method:"POST",
     headers:{
       'authorization':getCookie('token'),
@@ -55,7 +57,7 @@ function login(){
     let dataToSend = [];
     dataToSend[0] = document.querySelector('input[name="email"]').value;
     dataToSend[1] = document.querySelector('input[name="password"]').value;
-      fetch('https://real-bau.herokuapp.com/login',{
+      fetch('http://localhost:8080/login',{
           method:"POST",
           body:JSON.stringify(dataToSend),
           credentials: 'same-origin',

@@ -1,3 +1,5 @@
+let url = "https://realbauback.herokuapp.com";
+
 function search(){
 	let dataToSend = {};
 	dataToSend.FIRSTNAME = document.querySelector('input[name="FirstName"]').value;
@@ -45,7 +47,7 @@ function search(){
     dataToSend.VermessungFinish = document.querySelector('input[name="verfinish"]:checked').value;
   }
   
-  fetch("https://real-bau.herokuapp.com/proba", {
+  fetch(url+"/proba", {
 	  method: 'POST',
 	  headers: {
 		  'Content-Type': 'application/json',
@@ -80,9 +82,9 @@ function search(){
 
 
 
-let url2 = "https://real-bau.herokuapp.com/tableAll";
+let url2 = "http://localhost:8080/tableAll";
 
-fetch(url2,{
+fetch(url+"tableAll",{
   method:"POST",
   headers:{
     'authorization':getCookie("token")
@@ -183,7 +185,7 @@ function updateData(){
   dataToSend.TICKETFINISH = document.getElementById("ticket_finish").value;
   dataToSend.COMMENT = document.getElementById("comment").value;
   
-  fetch("https://real-bau.herokuapp.com/updateData", {
+  fetch(url+"/updateData", {
 	  method: 'POST',
 	  headers:{
       'Content-Type': 'application/json',
@@ -246,13 +248,6 @@ function topFunction() {
     //   document.body.scrollTop = 1200;
       document.documentElement.scrollTop = 1180;
 }
-
-let i=0;
-function displayMoreFilters(){
-    if(i%2===0) document.getElementById("moreInputs").style.display="block";
-    else document.getElementById("moreInputs").style.display="none";
-    i++;
-} 
 
 
 

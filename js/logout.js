@@ -1,9 +1,10 @@
+let url = "https://realbauback.herokuapp.com";
 function deleteToken(){
     document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
   }
   
   function logout(){
-    fetch("https://real-bau.herokuapp.com/logout", {
+    fetch(url+"/logout", {
       method:"GET",
       headers:{
         'authorization':getCookie('token'),

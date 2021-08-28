@@ -1,3 +1,5 @@
+let url = "https://realbauback.herokuapp.com" 
+
 function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(';');
@@ -15,7 +17,7 @@ function getCookie(cname) {
 
 let userId = 1;
 
-let url = "http://localhost:8080/proba";
+// let url = "http://localhost:8080/proba";
 
 // console.log("loading");
 
@@ -68,7 +70,7 @@ function search(){
     dataToSend.VermessungFinish = document.querySelector('input[name="verfinish"]:checked').value;
   }
   
-  fetch("https://real-bau.herokuapp.com/proba", {
+  fetch(url+"/proba", {
 	  method: 'POST',
 	  headers: {
 		  'Content-Type': 'application/json',
@@ -78,30 +80,42 @@ function search(){
     }).then(e => e.json())
     .then(data => {
 	    let tableText = "";
-      data.forEach((user) => {
-      tableText += "<tr>";
-      if(user.HBFinish==='DA'){
-        tableText += "<td style='color:green'><span style='display:none'>DA</span><img class='yesIcon' src='../background/cor1.png'></td>";
+      data.forEch((user) => {
+        tableText += "<tr>";
+        for (const column in user){
+          if(column.indexOf('finish') > -1){
+            if(user[column] == "DA"){
+              tableText += "<td style='color:green'><span style='display:none'>DA</span><img class='yesIcon' src='../background/cor1.png'></td>";
+            } else {
+              tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8; width:30px;heigth:30px' class='noIcon' src='../background/iks3.png'></td>";
+            }
+
+          } else {
+            tableText += "<td>" + user[column] + "</td>"
+          }
+        }
+      
+      /*if(user.HBFinish==='DA'){
+        
       }else{
-        tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8;' class='noIcon' src='../background/iks3.png'></td>";
       }
       if(user.TIEFBAUFINISH==='DA'){
-        tableText += "<td style='color:green'><span style='display:none'>DA</span><img class='yesIcon' src='../background/cor1.png'></td>";
+        tableText += "<td style='color:green'><span style='display:none'>DA</span><img src='../background/cor1.png'></td>";
       }else{
-        tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8;width:30px;heigth:30px' class='noIcon' src='../background/iks3.png'></td>";
+        tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8;width:30px;heigth:30px' src='../background/iks3.png'></td>";
       }
-      tableText += "<td style='display:none'>" + user.FIRSTNAME + "</td>";
-      tableText += "<td style='display:none'>" + user.NAME + "</td>";
+      tableText += "<td>" + user.FIRSTNAME + "</td>";
+      tableText += "<td>" + user.NAME + "</td>";
       // tableText += "<td>" + user.EMAIL + "</td>";
-      tableText += "<td style='display:none'>" + user.PHONE + "</td>";
+      tableText += "<td>" + user.PHONE + "</td>";
       tableText += "<td>" + user.CITY + "</td>";
       tableText += "<td>" + user.STREET + "</td>";
       tableText += "<td>" + user.HAUSNUMMER + "</td>";
-      tableText += "<td style='display:none'>" + user.AREAPOP + "</td>";
-      tableText += "<td style='display:none'>" + user.DP + "</td>";
+      tableText += "<td>" + user.AREAPOP + "</td>";
+      tableText += "<td>" + user.DP + "</td>";
       
       // tableText += "<td style='color:red'>" + user.HBFinish + "</td>";
-      // tableText += "<td>" + user.TIEFBAUFINISH + "</td>";
+      // tableText += "<td>" + user.TIEFBAUFINISH + "</td>";*/
       tableText += "</tr>";
       // console.log(user);
     });
@@ -113,10 +127,9 @@ function search(){
 
 
 
-// let url2 = "http://localhost:8080/tableAll";
-let url2 = "https://real-bau.herokuapp.com/tableAll"
+let url2 = "http://localhost:8080/tableAll";
 
-fetch(url2,{
+fetch(url+"/tableAll",{
   method:"POST",
   headers:{
     'authorization':getCookie("token")
@@ -124,32 +137,43 @@ fetch(url2,{
 })
 .then(e => e.json())
   .then((response) => {
-
     let tableText = "";
     response.forEach((user) => {
       tableText += "<tr>";
-      if(user.HBFinish==='DA'){
-        tableText += "<td style='color:green'><span style='display:none'>DA</span><img class='yesIcon' src='../background/cor1.png'></td>";
+      for (const column in user){
+        if(column.toLowerCase().indexOf('finish') > -1){
+          if(user[column] == "DA"){
+            tableText += "<td style='color:green'><span style='display:none'>DA</span><img class='yesIcon' src='../background/cor1.png'></td>";
+          } else {
+            tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8; width:30px;heigth:30px' class='noIcon' src='../background/iks3.png'></td>";
+          }
+
+        } else {
+          tableText += "<td>" + user[column] + "</td>"
+        }
+      }
+      /*if(user.HBFinish==='DA'){
+        tableText += "<td style='color:green'><span style='display:none'>DA</span><img src='../background/cor1.png'></td>";
       }else{
-        tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8;' class='noIcon' src='../background/iks3.png'></td>";
+        tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8; width:30px;heigth:30px' src='../background/iks3.png'></td>";
       }
       if(user.TIEFBAUFINISH==='DA'){
-        tableText += "<td style='color:green'><span style='display:none'>DA</span><img class='yesIcon' src='../background/cor1.png'></td>";
+        tableText += "<td style='color:green'><span style='display:none'>DA</span><img src='../background/cor1.png'></td>";
       }else{
-        tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8;' class='noIcon' src='../background/iks3.png'></td>";
+        tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8;width:30px;heigth:30px' src='../background/iks3.png'></td>";
       }
-      tableText += "<td style='display:none'>" + user.FIRSTNAME + "</td>";
-      tableText += "<td style='display:none'>" + user.NAME + "</td>";
+      tableText += "<td>" + user.FIRSTNAME + "</td>";
+      tableText += "<td>" + user.NAME + "</td>";
       // tableText += "<td>" + user.EMAIL + "</td>";
-      tableText += "<td style='display:none'>" + user.PHONE + "</td>";
+      tableText += "<td>" + user.PHONE + "</td>";
       tableText += "<td>" + user.CITY + "</td>";
       tableText += "<td>" + user.STREET + "</td>";
       tableText += "<td>" + user.HAUSNUMMER + "</td>";
-      tableText += "<td style='display:none'>" + user.AREAPOP + "</td>";
-      tableText += "<td style='display:none'>" + user.DP + "</td>";
+      tableText += "<td>" + user.AREAPOP + "</td>";
+      tableText += "<td>" + user.DP + "</td>";
       
       // tableText += "<td id='dada'>" + user.HBFinish + "</td>";
-      // tableText += "<td>" + user.TIEFBAUFINISH + "</td>";
+      // tableText += "<td>" + user.TIEFBAUFINISH + "</td>";*/
       tableText += "</tr>";
       // console.log(user);
     });
@@ -168,20 +192,21 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  // if (
-  //   document.body.scrollTop > 600 ||
-  //   document.documentElement.scrollTop > 600
-  // ) {
-  //   if(window.matchMedia("(max-width: 600px)").mathces){
-  //     mybutton.style.display = "none";
-  //   } else{
-  //     mybutton.style.display = "block";
-  //   }
-  // } else {
-  //   mybutton.style.display = "none";
-  // }
+  if (
+    document.body.scrollTop > 600 ||
+    document.documentElement.scrollTop > 600
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
 }
 
+// if(document.querySelectorAll('td').value==='NE'){
+//   document.querySelectorAll('td').style.color='red';
+// }
+
+// When the user clicks on the button, scroll to the top of the table
 async function topFunction() {
   document.body.scrollTop = 430;
   document.documentElement.scrollTop = 430;
