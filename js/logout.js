@@ -3,7 +3,7 @@ function deleteToken(){
   }
   
   function logout(){
-    fetch("http://localhost:8080/logout", {
+    fetch("https://real-bau.herokuapp.com/logout", {
       method:"GET",
       headers:{
         'authorization':getCookie('token'),

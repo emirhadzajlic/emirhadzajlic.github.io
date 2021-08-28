@@ -13,7 +13,7 @@ function getCookie(cname) {
     return "";
   }
   
-    fetch("http://localhost:8080/auth", {
+    fetch("https://real-bau.herokuapp.com/auth", {
     method:"POST",
     headers:{
       'authorization':getCookie('token'),
