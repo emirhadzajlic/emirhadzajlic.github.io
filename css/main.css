@@ -605,8 +605,8 @@ input[type="radio"]{
     border-bottom: 1px solid #dddddd;
 }
 .noIcon{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 
 .styled-table tbody tr:nth-of-type(even) {

@@ -27,7 +27,7 @@ function auth(){
     console.log(data)
     if(data.isAuth) {
       if(data.role !== "ad") {
-        window.location.href = window.location.origin + './index.html';
+        window.location.href = window.location.origin + '/index.html';
       } else {
         window.location.href = window.location.origin +'/html/admin.html';
       }
