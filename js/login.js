@@ -27,7 +27,7 @@ function auth(){
     console.log(data)
     if(data.isAuth) {
       if(data.role !== "ad") {
-        window.location.href = window.location.origin + '/html/main.html';
+        window.location.href = window.location.origin + '/index.html';
       } else {
         window.location.href = window.location.origin +'/html/admin.html';
       }
@@ -57,7 +57,7 @@ function login(){
     let dataToSend = [];
     dataToSend[0] = document.querySelector('input[name="email"]').value;
     dataToSend[1] = document.querySelector('input[name="password"]').value;
-      fetch('http://localhost:8080/login',{
+      fetch(url+"/login",{
           method:"POST",
           body:JSON.stringify(dataToSend),
           credentials: 'same-origin',
