@@ -1,0 +1,9 @@
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 95%;
+        margin-top: 90px;
+    }
+    header span{
+        left: 25px;
+    }
+}
