@@ -1,4 +1,4 @@
-let url = "https://realbauback.herokuapp.com" 
+// let url = "https://realbauback.herokuapp.com" 
 
 function getCookie(cname) {
   let name = cname + "=";
