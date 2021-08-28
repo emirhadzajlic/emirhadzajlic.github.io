@@ -48,9 +48,6 @@
     .srow{
         flex-direction: column;
     }
-    .erow{
-        /* flex-direction: column; */
-    }
     .frow{
         flex-direction: column;
     }

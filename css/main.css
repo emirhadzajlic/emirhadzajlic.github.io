@@ -608,6 +608,10 @@ input[type="radio"]{
     width: 20px;
     height: 20px;
 }
+.yesIcon{
+    width: 22px;
+    height: 22px;
+}
 
 .styled-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;

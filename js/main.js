@@ -145,7 +145,7 @@ fetch("https://realbauback.herokuapp.com/tableAll",{
           if(user[column] == "DA"){
             tableText += "<td style='color:green'><span style='display:none'>DA</span><img class='yesIcon' src='../background/cor1.png'></td>";
           } else {
-            tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8; width:30px;heigth:30px' class='noIcon' src='../background/iks3.png'></td>";
+            tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8' class='noIcon' src='../background/iks3.png'></td>";
           }
 
         } else {
