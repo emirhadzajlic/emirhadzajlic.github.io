@@ -48,15 +48,19 @@
     .srow{
         flex-direction: column;
     }
+    .erow{
+        /* flex-direction: column; */
+    }
     .frow{
         flex-direction: column;
     }
-    .trow{
-        /* flex-direction: column; */
+    .trow,.horow{
+        flex-direction: column;
         width: 100%;
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    
     .nrow{
         width: 100%;
     }
@@ -66,9 +70,15 @@
     .xrow{
         margin: 10px;
         width: 100%;
+        flex-direction: row;
     }
     .container form .form-control{
         height: 40px;
         font-size: 16px;
+    }
+    
+    .horrow{
+        display: flex;
+        flex-direction: column;
     }
 }

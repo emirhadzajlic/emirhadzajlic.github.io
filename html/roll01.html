@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Real-Bau App</title>
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+    <link rel="stylesheet" href="../css/roll01.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <p>RealBau</p>
+            </div>
+            <div class="menu-icon">
+                <i onclick="menuToggle()" class="fas fa-chevron-circle-down fa-2x"></i>
+            </div>
+        </div>
+        <div class="menu">
+            <div>
+                <ul>
+                    <li><h3 onclick="manageAccountsWindow()">Manage Accounts</h3></li>
+                    <li><h3 onclick="searchWindow()">Search</h3></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container container-active">
+        
+        <form action="">
+            <h1>INFO</h1>
+            <div class="form-group">
+                <div class="formFlex">
+                    <label for="fname">Ime</label><br>
+                    <input type="text" id="fname" class="form-control">
+                </div>
+                <div class="formFlex">
+                    <label for="flname">Prezime</label><br>
+                    <input type="text" id="flname" class="form-control">
+                </div>
+                <div class="formFlex">
+                    <label for="fcoid">CO ID</label><br>
+                    <input type="text" id="fcoid" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="formFlex">
+                    <label for="fcity">Grad</label><br>
+                    <input type="text" id="fcity" class="form-control">
+                </div>
+                <div class="formFlex">
+                    <label for="fstreet">Ulica</label><br>
+                    <input type="text" id="fstreet" class="form-control">
+                </div>
+                <div class="formFlex">
+                    <label for="fnum">Broj</label><br>
+                    <input type="text" id="fnum" class="form-control">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="formFlex">
+                    <label for="fdp">DP No</label><br>
+                    <input type="text" id="fdp" class="form-control">
+                </div>
+                <div class="formFlex">
+                    <label for="fstatus">Status</label><br>
+                    <select name="fstatus" id="fstatus" class="form-control">
+                        <option value="volvo">Odaberi opciju</option>
+                        <option value="saab">NEW</option>
+                        <option value="audi">DENIED</option>
+                        <option value="opel">NACHANSCHLUSS</option>
+                        <option value="audi">Projectaansluiting</option>
+                    </select>
+                </div> 
+                <div class="formFlex">
+                    <label for="ftel">Telefon</label><br>
+                    <input type="text" id="ftel" class="form-control" required>
+                </div>    
+            </div>
+
+            <div class="form-group">
+                <div class="formFlex">
+                    <label for="fpop">Area POP</label><br>
+                    <input type="text" id="fpop" class="form-control">
+                </div>
+                <div class="formFlex">
+                    <label for="ftzip">TZIP</label><br>
+                    <input type="text" id="ftzip" class="form-control">
+                </div>
+                <div class="formFlex">
+                    <label for="femail">Email</label><br>
+                    <input type="email" id="femail" class="form-control">
+                </div>
+            </div>
+
+            <input type="submit" class="btn" value="Pretraga">
+        </form>
+    </div>
+
+    <section class="manage-accounts">
+        <div class="side-menu">
+            <button class="side-menu-items">Add Accounts</button>
+            <button class="side-menu-items">Manage roles</button>
+        </div>
+        <div class="view">
+            <div class="add-accounts">    
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>Create an account</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Password</span>
+                            <input type="password" name="password">
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Role</span>
+                            <select name="role">
+                                <option value="admin">Admin</option>
+                                <option value="callcentar">Callcentar</option>
+                                <option value="hausbegehung">hausbegehung</option>
+                                <option value="tiefbau">Tiefbau</option>
+                                <option value="faser_einblasen">faser_einblasen</option>
+                                <option value="montage_&_aktievirung">montage_</option>
+                                <option value="vermessung">Vermessung</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit">Make account</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="manage-roles">
+                <div class="row">
+                    <h3>Callcentar</h3>
+                    <input type="text">
+                    <button>Add</button>
+                </div>
+                <div class="row">
+                    <h3>hausbegehung</h3>
+                    <input type="text">
+                    <button>Add</button>
+                </div>
+                <div class="row">
+                    <h3>Tiefbau</h3>
+                    <input type="text">
+                    <button>Add</button>
+                </div>
+                <div class="row">
+                    <h3>faser_einblasen</h3>
+                    <input type="text">
+                    <button>Add</button>
+                </div>
+                <div class="row">
+                    <h3>montage_</h3>
+                    <input type="text">
+                    <button>Add</button>
+                </div>
+                <div class="row">
+                    <h3>Vermessung</h3>
+                    <input type="text">
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/roll01.js"></script>
+</body>
+
+</html>

@@ -3,12 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>RealBau</title>
     <!-- <link rel="stylesheet" href="../css/login.css"> -->
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/mainResponsive.css">
+    <link rel="stylesheet" href="../css/proba.css">
     <script src="../js/auth.js"></script>
     <script src="../js/logout.js"></script>
 </head>
@@ -67,7 +66,7 @@
             </ul>
             <div class="userDataMenu">
                 <h3>Emir Hadzajlic</h3>
-                <!-- <p>Created: 13.08.2021</p> -->
+                <p>Created: 13.08.2021</p>
                 
             </div>  
             
@@ -84,9 +83,8 @@
     <div class="container">
         <!-- <h1>FILTER</h1> -->
         <form action="http://localhost:8080/proba" method="POST" target="_blank">
-            <!-- <h1>FILTER</h1> -->
-            <!-- <hr> -->
-            <!-- <hr> -->
+            <h1>FILTER</h1>
+            <hr>
             <div class="srow">
                 <div class="erow">
                     <div class="frow">
@@ -110,183 +108,25 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <button onclick="displayMoreFilters()" type="button" class="moreInpBtn"><span class="filterArrow"><</span></button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div id="moreInputs">
-                <hr>
-                <div class="srow">
-                    <div class="erow">
-                        <div class="frow">
-                            <div class="nrow">
-                                <label for="fname">Ime</label><br>
-                                <input type="text" id="fname" class="form-control" name="FirstName">
-                            </div>
-                            <div class="nrow">
-                                <label for="flname">Prezime</label><br>
-                                <input type="text" id="flname" class="form-control" name="Surname">
-                            </div>
-                            <div class="nrow">
-                                <label for="fcoid">CO ID</label><br>
-                                <input type="text" id="fcoid" class="form-control" name="CoId">
-                            </div>
-                        </div>
-
-                        <div class="frow">
-                            <div class="nrow">
-                                <label for="femail">Email</label><br>
-                    <input type="email" id="femail" class="form-control" name="Email">
-                            </div>
-                            <div class="nrow">
-                                <label for="ftzip">TZIP</label><br>
-                    <input type="text" id="ftzip" class="form-control" name="Tzip">
-                            </div>
-                            <div class="nrow">
-                                <label for="fstatus">Status</label><br>
-                    <select name="Status" id="fstatus" class="form-control">
-                        <option value="">Odaberi opciju</option>
-                        <option value="new">NEW</option>
-                        <option value="denied">DENIED</option>
-                        <option value="nachanschluss">NACHANSCHLUSS</option>
-                        <option value="Projectaansluiting">Projectaansluiting</option>
-                    </select>
-                            </div>
-                        </div>
-
-                        <div class="frow">
-                            <div class="nrow">
-                                <label for="ftel">Telefon</label><br>
-                    <input type="text" id="ftel" class="form-control" name="Tel">
-                            </div>
-                            <div class="nrow">
-                                <label for="fdp">DP No</label><br>
-                    <input type="text" id="fdp" class="form-control" name="DpNo">
-                            </div>
-                            <div class="nrow">
-                                <label for="hb_vom_filter">HB Vom</label>
-                        <input type="text" id="hb_vom_filter" class="form-control" name="HbVom">
-                            </div>
-                        </div>
-
-                        <div class="frow">
-                            <div class="nrow">
-                                <label for="tfb_vom_filter">TFB Vom</label>
-                        <input type="text" id="tfb_vom_filter" class="form-control" name="TfbVom">
-                            </div>
-                            <div class="nrow">
-                                <label for="faza_vom_filter">Faza Vom</label>
-                        <input type="text" id="faza_vom_filter" class="form-control" name="FazaVom">
-                            </div>
-                            <div class="nrow">
-                                <label for="dpg_vom_filter">DPG Vom</label>
-                        <input type="text" id="dpg_vom_filter" class="form-control" name="DpgVom">
-                            </div>
-                        </div>
-
-                        <div class="frow">
-                            <div class="nrow">
-                                <label for="pop_vom_filter">POP Vom</label>
-                                <input type="text" id="pop_vom_filter" class="form-control" name="PopVom">
-                            </div>
-                            <div class="nrow">
-                                <label for="m_vom_filter">M Vom</label>
-                        <input type="text" id="m_vom_filter" class="form-control" name="MVom">
-                            </div>
-                            <div class="nrow">
-                                <label for="a_vom_filter">A Vom</label>
-                        <input type="text" id="a_vom_filter" class="form-control" name="AVom">
-                            </div>
-                        </div>
+                <div class="trow">
+                    <div class="radioFinish">
+                        <p>HB Finish</p>
+    
+                        <input type="radio" id="hb_finish_yes" value="da" name="hbfinish">
+                        <label for="hb_finish_yes">Yes</label>
+    
+                        <input type="radio" id="hb_finish_no" value="ne" name="hbfinish">
+                        <label for="hb_finish_no">No</label>
                     </div>
-
-                    <div class="trow">
-                        <div class="xrow">
-                            <div class="radioFinish">
-                                <p>DP Finish:</p>
-        
-                                    <input type="radio" id="dp_finish_yes" value="da" name="dpfinish">
-                                    <label for="dp_finish_yes">Yes</label>
-        
-                                    <input type="radio" id="dp_finish_no" value="ne" name="dpfinish">
-                                    <label for="dp_finish_no">No</label>
-        
-                            </div>
-            
-                            <div class="radioFinish">
-                                <p>POP Finish:</p>
-        
-                                    <input type="radio" id="pop_finish_yes" value="da" name="popfinish">
-                                    <label for="pop_finish_yes">Yes</label>
-        
-                                    <input type="radio" id="pop_finish_no" value="ne" name="popfinish">
-                                    <label for="pop_finish_no">No</label>
-        
-                            </div>
-                        </div>
-                        <div class="xrow">
-                            <div class="radioFinish">
-                                <p>Faza Finish:</p>
-        
-                                    <input type="radio" id="faza_finish_yes" value="da" name="fazafinish">
-                                    <label for="faza_finish_yes">Yes</label>
-        
-                                    <input type="radio" id="faza_finish_no" value="ne" name="fazafinish">
-                                    <label for="faza_finish_no">No</label>
-        
-                            </div>
-            
-                            <div class="radioFinish">
-                                <p>M Finish:</p>
-        
-                                    <input type="radio" id="m_finish_yes" value="da" name="mfinish">
-                                    <label for="m_finish_yes">Yes</label>
-        
-                                    <input type="radio" id="m_finish_no" value="ne" name="mfinish">
-                                    <label for="m_finish_no">No</label>
-        
-                            </div>
-                        </div>
-                        <div class="xrow">
-                            <div class="radioFinish">
-                                <div class="radioFinish">
-                                    <p>AKT Finish:</p>
-            
-                                        <input type="radio" id="akt_finish_yes" value="da" name="aktfinish">
-                                        <label for="akt_finish_yes">Yes</label>
-            
-                                        <input type="radio" id="akt_finish_no" value="ne" name="aktfinish">
-                                        <label for="akt_finish_no">No</label>
-            
-                                </div>
-                            </div>
-            
-                            <div class="radioFinish">
-                                <p>V Finish:</p>
-        
-                                    <input type="radio" id="ver_finish_yes" value="da" name="verfinish">
-                                    <label for="ver_finish_yes">Yes</label>
-          
-                                    <input type="radio" id="ver_finish_no" value="ne" name="verfinish">
-                                    <label for="ver_finish_no">No</label>
-                            </div>
-                        </div>
+    
+                    <div class="radioFinish">
+                        <p>TFB Finish</p>
+    
+                        <input type="radio" id="tfb_finish_yes" value="da" name="tfbfinish">
+                        <label for="tfb_finish_yes">Yes</label>
+    
+                        <input type="radio" id="tfb_finish_no" value="ne" name="tfbfinish">
+                        <label for="tfb_finish_no">No</label>
                     </div>
                 </div>
             </div>
@@ -525,6 +365,25 @@
     <table class="styled-table" id="tblStocks">
         <thead>
             <tr>
+                <!-- <th class="fth">Tiefbau</th> -->
+                <!-- <th>Vermessung</th> -->
+                <!-- <th>Verr. date</th> -->
+                <th>HB Finish</th>
+                <th>TFB Finish</th>
+                <th>First Name</th>
+                <th>Surname</th>
+                <!-- <th>Email</th> -->
+                <th>Phone</th>
+                <th>City</th>
+                <th>Street</th>
+                <th>HouseNo</th>
+                <th>AreaPop</th>
+                <th>DP</th>
+                <!-- <th>HausNO</th> -->
+                <!-- <th>Suppl</th> -->
+                <!-- <th>Unit</th> -->
+                <!-- <th>Areapop</th> -->
+                <!-- <th class="lth">DP</th> -->
             </tr>
         </thead>
         <tbody id="tablebodylol"></tbody>
@@ -576,7 +435,7 @@
             }
         }
     </script> 
-    <script src="../js/admin.js"></script>
+    <script src="../js/proba.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,52 @@
+@media only screen and (max-width: 600px) {
+
+    #manageDataCont{
+        width: 100%;
+        height: 100vh;
+        overflow-x: scroll;
+        top: 0;
+        z-index: 100;
+        /* top: 0; */
+        /* left: 0; */
+    }
+    #manageDataCont #hrrr{
+        margin-bottom: 20px;
+    }
+    #manageDataCont hr{
+        width: 90%;
+    }
+    #mngDataBtn{
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .inpRow{
+        flex-direction: column;
+        /* width: 100%; */
+    }
+    .inpRow div{
+        width: 90%;
+        margin: auto;
+    }
+    #manageDataCont form{
+        /* position: absolute; */
+        /* top: 450px; */
+        /* top: 92%; */
+        /* top: 500px; */
+        height: 280%;
+        /* overflow-y: scroll; */
+    }
+    #btnX{
+        left: 85%;
+        font-size: 35px;
+        width: 40px;
+        height: 40px;
+    }
+    .inpRow input{
+        height: 35px;
+    }
+    .bttn{
+        width: 30px;
+        height: 30px;
+    }
+}

@@ -1,5 +1,4 @@
 // let url = "https://realbauback.herokuapp.com";
-
 function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(';');
@@ -70,7 +69,7 @@ function search(){
     dataToSend.VermessungFinish = document.querySelector('input[name="verfinish"]:checked').value;
   }
   
-  fetch("https://realbauback.herokuapp.com/proba", {
+  fetch(/*"https://realbauback.herokuapp.com/proba"*/"http://localhost:8080/proba", {
 	  method: 'POST',
 	  headers: {
 		  'Content-Type': 'application/json',
@@ -81,11 +80,27 @@ function search(){
     .then(data => {
 	    let tableText = "";
       data.forEach((user) => {
-      tableText += "<tr>";
-      if(user.HBFinish==='DA'){
-        tableText += "<td style='color:green'><span style='display:none'>DA</span><img src='../background/cor1.png'></td>";
+        tableText += "<tr>";
+        for (const column in user){
+          if(column.toLowerCase().indexOf('finish') > -1){
+            if(user[column] == "DA"){
+              tableText += "<td style='color:green'><span style='display:none'>DA</span><img class='yesIcon' src='../background/cor1.png'></td>";
+            } else {
+              tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8;' class='noIcon' src='../background/iks3.png'></td>";
+            }
+
+          } else {
+            if(column == "STREET" || column == "HAUSNUMMER" || column == "ZUSAT" || column == "CITY") {
+              tableText += '<td class="for-phone">' + user[column] + "</td>"
+            } else {
+              tableText += '<td>' + user[column] + "</td>"
+            }
+          }
+        }
+      
+      /*if(user.HBFinish==='DA'){
+        
       }else{
-        tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8; width:30px;heigth:30px' src='../background/iks3.png'></td>";
       }
       if(user.TIEFBAUFINISH==='DA'){
         tableText += "<td style='color:green'><span style='display:none'>DA</span><img src='../background/cor1.png'></td>";
@@ -103,21 +118,39 @@ function search(){
       tableText += "<td>" + user.DP + "</td>";
       
       // tableText += "<td style='color:red'>" + user.HBFinish + "</td>";
-      // tableText += "<td>" + user.TIEFBAUFINISH + "</td>";
+      // tableText += "<td>" + user.TIEFBAUFINISH + "</td>";*/
       tableText += "</tr>";
       // console.log(user);
     });
 
     document.getElementById("tablebodylol").innerHTML = tableText;
+    forPhone()
 })
 .catch(err => console.log(err))
 }
 
+var forPhone = function(){
+  if (window.innerWidth<600){
+     document.querySelectorAll("th, td").forEach(e => {
+          if(!e.classList.contains("for-phone")){
+              e.style.display = "none";
+          }
+     })
+  } else {
+      document.querySelectorAll("th, td").forEach(e => {
+          if(!e.classList.contains("for-phone")){
+              e.style.display = "";
+          }
+     })
+  }
+};
 
+
+window.addEventListener("resize", forPhone);
 
 let url2 = "http://localhost:8080/tableAll";
 
-fetch("https://realbauback.herokuapp.com/tableAll",{
+fetch(/*"https://realbauback.herokuapp.com/tableAll"*/"http://localhost:8080/tableAll",{
   method:"POST",
   headers:{
     'authorization':getCookie("token")
@@ -125,11 +158,26 @@ fetch("https://realbauback.herokuapp.com/tableAll",{
 })
 .then(e => e.json())
   .then((response) => {
-
     let tableText = "";
     response.forEach((user) => {
       tableText += "<tr>";
-      if(user.HBFinish==='DA'){
+      for (const column in user){
+        if(column.toLowerCase().indexOf('finish') > -1){
+          if(user[column] == "DA"){
+            tableText += "<td style='color:green'><span style='display:none'>DA</span><img class='yesIcon' src='../background/cor1.png'></td>";
+          } else {
+            tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8;' class='noIcon' src='../background/iks3.png'></td>";
+          }
+
+        } else {
+          if(column == "STREET" || column == "HAUSNUMMER" || column == "ZUSAT" || column == "CITY") {
+            tableText += '<td class="for-phone">' + user[column] + "</td>"
+          } else {
+            tableText += '<td>' + user[column] + "</td>"
+          }
+        }
+      }
+      /*if(user.HBFinish==='DA'){
         tableText += "<td style='color:green'><span style='display:none'>DA</span><img src='../background/cor1.png'></td>";
       }else{
         tableText += "<td style='color:red'><span style='display:none'>NE</span><img style='opacity:0.8; width:30px;heigth:30px' src='../background/iks3.png'></td>";
@@ -150,12 +198,13 @@ fetch("https://realbauback.herokuapp.com/tableAll",{
       tableText += "<td>" + user.DP + "</td>";
       
       // tableText += "<td id='dada'>" + user.HBFinish + "</td>";
-      // tableText += "<td>" + user.TIEFBAUFINISH + "</td>";
+      // tableText += "<td>" + user.TIEFBAUFINISH + "</td>";*/
       tableText += "</tr>";
       // console.log(user);
     });
 
     document.getElementById("tablebodylol").innerHTML = tableText;
+    forPhone();
   })
   .catch(function (error) {
     console.log(error);
@@ -262,3 +311,7 @@ function displayMoreFilters(){
     else document.getElementById("moreInputs").style.display="none";
     i++;
 } 
+
+
+
+

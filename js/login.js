@@ -16,7 +16,7 @@ function getCookie(cname) {
   }
 
 function auth(){
-  fetch("https://realbauback.herokuapp.com/auth", {
+  fetch(/*"https://realbauback.herokuapp.com/auth"*/"http://localhost:8080/auth", {
     method:"POST",
     headers:{
       'authorization':getCookie('token'),
@@ -26,10 +26,14 @@ function auth(){
   .then(data => {
     console.log(data)
     if(data.isAuth) {
-      if(data.role !== "ad") {
-        window.location.href = window.location.origin + '/index.html';
-      } else {
+      if(data.role == "cc") {
+        window.location.href = window.location.origin + '/html/callCentar.html';
+      }
+      if(data.role == "ad") {
         window.location.href = window.location.origin +'/html/admin.html';
+      } 
+       else {
+        window.location.href = window.location.origin + '/index.html';
       }
       document.querySelector('.userDataMenu').children[0].innerHTML = data.ime + " " + data.prezime
     } else {
@@ -57,7 +61,7 @@ function login(){
     let dataToSend = [];
     dataToSend[0] = document.querySelector('input[name="email"]').value;
     dataToSend[1] = document.querySelector('input[name="password"]').value;
-      fetch("https://realbauback.herokuapp.com/login",{
+      fetch(/*"https://realbauback.herokuapp.com/login"*/"http://localhost:8080/login",{
           method:"POST",
           body:JSON.stringify(dataToSend),
           credentials: 'same-origin',

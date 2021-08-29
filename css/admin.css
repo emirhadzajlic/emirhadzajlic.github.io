@@ -400,7 +400,7 @@ header span{
     width: 50%;
 }
 .erow{
-    width: 60%;
+    width: 100%;
 }
 .trow{
     /* width: 100%; */
@@ -457,6 +457,10 @@ header span{
     /* margin-bottom: 24px; */
     /* color: #222; */
     /* color: silver; */
+}
+.noIcon{
+    width: 29px;
+    height: 29px;
 }
 hr{
     margin-top: 3px;
